@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== SCREEN 1: START ========== -->
+    <div id="start-screen" class="screen active">
+        <div class="start-card">
+            <div class="start-icon">🧠</div>
+            <h1>Quiz Challenge</h1>
+            <p class="start-sub">Test your knowledge on Web Dev, JavaScript, AI & Tech</p>
+            <div class="start-badges">
+                <div class="badge">📋 14 Questions</div>
+                <div class="badge">⏱️ 15s Each</div>
+                <div class="badge">🏆 Instant Score</div>
+            </div>
+            <button id="startBtn" class="btn-main">Start Quiz ➜</button>
+        </div>
+    </div>
+
+    <!-- ========== SCREEN 2: QUIZ ========== -->
+    <div id="quiz-screen" class="screen">
+        <h1 class="quiz-heading">My Quiz App</h1>
+        <div class="box" id="quiz-box">
+            <div id="progress-bar-wrap">
+                <div id="progress-bar"></div>
+            </div>
+            <div id="meta-row">
+                <span id="q-counter">Question 1 / 14</span>
+                <span id="timer">⏱ 15s</span>
+            </div>
+            <div class="question">
+                <p id="question-text">Loading...</p>
+            </div>
+            <div class="options" id="options-container"></div>
+            <p id="feedback"></p>
+            <button id="nextBtn" style="display:none;">Next →</button>
+        </div>
+    </div>
+
+    <!-- ========== SCREEN 3: RESULT ========== -->
+    <div id="result-screen" class="screen">
+        <div class="result-card">
+            <div class="result-trophy" id="result-trophy">🏆</div>
+            <h2 class="result-title" id="result-title">Excellent!</h2>
+            <p class="result-sub" id="result-sub">You really know your stuff!</p>
+
+            <div class="score-ring-wrap">
+                <svg class="score-svg" viewBox="0 0 120 120">
+                    <defs>
+                        <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%"   stop-color="#ff6b6b"/>
+                            <stop offset="50%"  stop-color="#ffd166"/>
+                            <stop offset="100%" stop-color="#06d6a0"/>
+                        </linearGradient>
+                    </defs>
+                    <circle class="ring-bg"   cx="60" cy="60" r="50"/>
+                    <circle class="ring-fill" id="ring-fill" cx="60" cy="60" r="50"/>
+                </svg>
+                <div class="score-center">
+                    <span class="score-num" id="score-num">0</span>
+                    <span class="score-den">/14</span>
+                </div>
+            </div>
+
+            <div class="result-stats">
+                <div class="stat-box stat-correct">
+                    <span class="stat-icon">✅</span>
+                    <span class="stat-num" id="st-correct">0</span>
+                    <span class="stat-lbl">Correct</span>
+                </div>
+                <div class="stat-box stat-wrong">
+                    <span class="stat-icon">❌</span>
+                    <span class="stat-num" id="st-wrong">0</span>
+                    <span class="stat-lbl">Wrong</span>
+                </div>
+                <div class="stat-box stat-pct">
+                    <span class="stat-icon">📊</span>
+                    <span class="stat-num" id="st-pct">0%</span>
+                    <span class="stat-lbl">Score</span>
+                </div>
+            </div>
+
+            <p class="result-msg" id="result-msg"></p>
+
+            <div class="result-btns">
+                <button id="restartBtn" class="btn-main">🔄 Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tech Quiz App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ========== START SCREEN ========== -->
+  <div id="start-screen" class="screen active">
+    <div class="card start-card">
+      <div class="brand-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="24" fill="url(#g1)"/>
+          <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+                fill="white" font-size="22" font-family="Outfit" font-weight="800">Q</text>
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#1c5752"/>
+              <stop offset="1" stop-color="#2d8b83"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <h1 class="app-title">Tech <span>Quiz</span></h1>
+      <p class="app-desc">Challenge yourself on Web Development, JavaScript, AI & General Tech</p>
+
+      <div class="badges">
+        <div class="badge"><span class="badge-icon">📋</span><span>14 Questions</span></div>
+        <div class="badge"><span class="badge-icon">⏱️</span><span>15s Per Q</span></div>
+        <div class="badge"><span class="badge-icon">🏆</span><span>Instant Score</span></div>
+      </div>
+
+      <button class="btn-primary" id="startBtn">
+        <span>Start Quiz</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ========== QUIZ SCREEN ========== -->
+  <div id="quiz-screen" class="screen">
+    <div class="quiz-layout">
+
+      <!-- Top Bar -->
+      <div class="top-bar">
+        <div class="q-info">
+          <span id="q-label">Q 1</span>
+          <span class="q-slash">/</span>
+          <span id="q-total">14</span>
+        </div>
+        <div class="score-live">Score: <strong id="live-score">0</strong></div>
+        <div class="timer-wrap" id="timer-wrap">
+          <svg class="timer-ring" viewBox="0 0 40 40">
+            <circle class="ring-bg" cx="20" cy="20" r="16"/>
+            <circle class="ring-fill" id="ring-fill" cx="20" cy="20" r="16"/>
+          </svg>
+          <span id="timer-num">15</span>
+        </div>
+      </div>
+
+      <!-- Progress -->
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+
+      <!-- Question Card -->
+      <div class="card question-card" id="question-card">
+        <div class="q-number-bg" id="q-number-bg">01</div>
+        <p class="q-text" id="q-text">Loading question...</p>
+
+        <div class="options-list" id="options-list">
+          <!-- options injected by JS -->
+        </div>
+
+        <div class="card-footer">
+          <div class="feedback-msg" id="feedback-msg"></div>
+          <button class="btn-next" id="nextBtn" style="display:none;">
+            <span id="next-label">Next</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== RESULT SCREEN ========== -->
+  <div id="result-screen" class="screen">
+    <div class="card result-card">
+
+      <div class="result-emoji" id="result-emoji">🎉</div>
+      <h2 class="result-title" id="result-title">Excellent!</h2>
+      <p class="result-sub" id="result-sub">You really know your tech!</p>
+
+      <!-- Circular Score -->
+      <div class="score-donut">
+        <svg viewBox="0 0 120 120">
+          <defs>
+            <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#1c5752"/>
+              <stop offset="100%" stop-color="#f0a500"/>
+            </linearGradient>
+          </defs>
+          <circle class="donut-bg" cx="60" cy="60" r="50"/>
+          <circle class="donut-fill" id="donut-fill" cx="60" cy="60" r="50"/>
+        </svg>
+        <div class="donut-center">
+          <span class="donut-score" id="donut-score">0</span>
+          <span class="donut-label">/ 14</span>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="stats-row">
+        <div class="stat-box correct-box">
+          <span class="stat-num" id="st-correct">0</span>
+          <span class="stat-lbl">✅ Correct</span>
+        </div>
+        <div class="stat-box wrong-box">
+          <span class="stat-num" id="st-wrong">0</span>
+          <span class="stat-lbl">❌ Wrong</span>
+        </div>
+        <div class="stat-box pct-box">
+          <span class="stat-num" id="st-pct">0%</span>
+          <span class="stat-lbl">📊 Score</span>
+        </div>
+      </div>
+
+      <button class="btn-primary" id="restartBtn">
+        <span>Play Again</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="1 4 1 10 7 10"/>
+          <path d="M3.51 15a9 9 0 1 0 .49-3.5"/>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

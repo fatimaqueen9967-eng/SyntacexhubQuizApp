@@ -1,0 +1,153 @@
+/* body{
+    background-color: #1c5752;
+    font-family: Arial, sans-serif;
+    margin-left: 50px;
+    padding: 20px;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    align-items: center; */
+    /* color: #333; */
+/* }
+.box{ */
+    /* height: 700px; */
+    /* display: flex; */
+    
+    /* background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 400px;
+    overflow-wrap: anywhere;
+}
+button {
+    background-color: #1c5752;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+ *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:linear-gradient(135deg,#1c5752,#2d8a82);
+font-family:Arial, sans-serif;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+color:white;
+padding:20px;
+}
+
+h1{
+margin-bottom:20px;
+animation:fadeDown 1s ease;
+}
+
+.box{
+background:white;
+color:#333;
+padding:30px;
+border-radius:12px;
+width:420px;
+max-width:95%;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+text-align:center;
+animation:fadeUp 1s ease;
+}
+
+#question{
+font-size:20px;
+margin-bottom:20px;
+font-weight:bold;
+}
+
+.options{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.options button{
+padding:12px;
+border:none;
+border-radius:8px;
+background:#1c5752;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+.options button:hover{
+background:#14433f;
+transform:scale(1.05);
+}
+
+.correct{
+background:green !important;
+}
+
+.wrong{
+background:red !important;
+}
+
+#nextBtn{
+margin-top:20px;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#2d8a82;
+color:white;
+cursor:pointer;
+display:none;
+}
+
+/* Animations */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* Mobile Responsive */
+
+@media (max-width:500px){
+
+.box{
+width:100%;
+padding:20px;
+}
+
+#question{
+font-size:18px;
+}
+
+}

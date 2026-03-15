@@ -1,0 +1,137 @@
+/*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, sans-serif;
+}
+
+body{
+background-color:#1c5752;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:30px;
+color:white;
+}
+
+/* heading */
+
+h1{
+margin-bottom:10px;
+}
+
+/* question counter */
+
+#counter{
+font-size:18px;
+margin-bottom:10px;
+font-weight:bold;
+}
+
+/* quiz box */
+
+.box{
+background:white;
+color:#333;
+padding:25px;
+border-radius:10px;
+width:420px;
+max-width:95%;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* progress bar */
+
+.progress-container{
+width:100%;
+height:8px;
+background:#ddd;
+border-radius:20px;
+overflow:hidden;
+margin-bottom:15px;
+}
+
+#progress-bar{
+height:100%;
+width:0%;
+background:#1c5752;
+transition:0.4s;
+}
+
+/* timer */
+
+#timer-bar{
+height:6px;
+background:red;
+width:100%;
+border-radius:10px;
+margin-bottom:20px;
+transition:width 1s linear;
+}
+
+/* questions */
+
+.question{
+font-size:20px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+/* options */
+
+.options{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-bottom:20px;
+}
+
+.options button{
+background:#1c5752;
+color:white;
+padding:12px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.options button:hover{
+background:#14433f;
+transform:scale(1.04);
+}
+
+/* correct & wrong */
+
+.correct{
+background:green !important;
+}
+
+.wrong{
+background:red !important;
+}
+
+/* feedback message */
+
+#feedback{
+text-align:center;
+font-weight:bold;
+font-size:18px;
+margin-top:10px;
+min-height:25px;
+}
+
+/* responsive */
+
+@media(max-width:500px){
+
+.box{
+width:100%;
+}
+
+.question{
+font-size:18px;
+}
+
+}

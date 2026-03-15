@@ -1,0 +1,139 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, sans-serif;
+}
+
+body{
+background: linear-gradient(135deg,#1c5752,#2d8a82);
+min-height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+padding:30px;
+color:white;
+}
+
+/* Heading */
+
+h1{
+margin-bottom:20px;
+animation:fadeDown 1s ease;
+}
+
+/* Quiz Box */
+
+.box{
+background:white;
+color:#333;
+padding:25px;
+border-radius:12px;
+width:420px;
+max-width:95%;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Questions */
+
+.question{
+font-size:20px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+/* Options */
+
+.options{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-bottom:20px;
+}
+
+.options button{
+padding:12px;
+border:none;
+border-radius:8px;
+background:#1c5752;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+.options button:hover{
+background:#14433f;
+transform:scale(1.05);
+}
+
+.correct{
+background:green !important;
+}
+
+.wrong{
+background:red !important;
+}
+
+/* Appreciation text */
+
+#message{
+text-align:center;
+font-weight:bold;
+margin-top:10px;
+font-size:18px;
+}
+
+/* Progress Bar */
+
+.progress-container{
+width:100%;
+background:#ddd;
+border-radius:20px;
+margin-bottom:15px;
+overflow:hidden;
+}
+
+.progress-bar{
+height:10px;
+background:#1c5752;
+width:0%;
+transition:0.4s;
+}
+
+/* Timer */
+
+.timer{
+height:6px;
+background:red;
+width:100%;
+margin-bottom:20px;
+transition:width 1s linear;
+}
+
+/* Animations */
+
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* Responsive */
+
+@media(max-width:500px){
+
+.box{
+width:100%;
+padding:20px;
+}
+
+.question{
+font-size:18px;
+}
+
+}
