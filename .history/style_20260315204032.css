@@ -1,9 +1,5 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
 body{
-/* background:linear-gradient(135deg,#89039b,#83005c); */
-background: linear-gradient(135deg, #1a1a1a, #0b1a2b); 
-/* #1a1a1a = dark gray, #0b1a2b = navy */
+background:linear-gradient(135deg,#89039b,#83005c);
 font-family:Arial;
 display:flex;
 flex-direction:column;
@@ -83,8 +79,7 @@ margin-bottom:15px;
 #progress{
 height:100%;
 width:0%;
-/* background:linear-gradient(90deg,#81045c,#6e0169); */
-background: linear-gradient(90deg, #121312, #072424);
+background:linear-gradient(90deg,#81045c,#6e0169);
 transition:width .4s;
 }
 
@@ -113,29 +108,22 @@ padding:10px;
 margin:8px 0;
 border:none;
 border-radius:8px;
-/* background:#ce2cff; */
+background:#ce2cff;
 color:white;
 cursor:pointer;
 transition:.3s;
-font-size: 20px;
-background: #0b1a2b; 
-/* color: #39ff14;      */
-box-shadow: 0 0 8px #0c0c0c; 
+font-size: 20px
 }
 
 .options button:hover{
 transform:scale(1.05);
-background:#f3f1f3;
-color:#0b1a2b;
-box-shadow: 0 0 15px #0c0c0c;
+background:#4b005a;
 }
 
 /* ANSWERS */
 
 .correct{
-background:#1e436d !important;
-/* color: #39ff14 !important; */
-color: #e3f8f8 !important;
+background:#f388be !important;
 }
 
 .wrong{
@@ -147,8 +135,7 @@ background:#e74c3c !important;
 #answer-info{
 margin-top:10px;
 font-weight:bold;
-color:#0b1a2b;
-font-size: 20px;
+color:red;
 }
 
 /* NEXT BUTTON */
@@ -156,28 +143,22 @@ font-size: 20px;
 #nextBtn{
 margin-top:15px;
 padding:10px 20px;
-background:#0b1a2b;
-color: #e3f8f8;
-  box-shadow: 0 0 10px #111313;
-
+background:#74016a;
+color:white;
 border:none;
 border-radius:6px;
 cursor:pointer;
 font-size: 18px;
 }
-#nextBtn:hover {
-  box-shadow: 0 0 20px #272526;
-}
-
 
 /* RESULT */
 
 .result-box{
 text-align:center;
-background:rgb(8, 8, 8);
+background:rgb(243, 56, 171);
 color:#f7f4f4;
 padding:30px;
-font-size: 18px;
+font-size: ;
 border-radius:12px;
 width:350px;
 max-width:90%;
@@ -188,7 +169,7 @@ box-shadow:0 0 25px rgba(0,0,0,0.3);
 width:150px;
 height:150px;
 border-radius:50%;
-border:12px solid #f0eff1;
+border:12px solid #4b2cff;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -196,13 +177,6 @@ font-size:28px;
 font-weight:bold;
 margin:20px auto;
 animation:pop .6s;
-border: 10px solid #15142e;
-  color: #eef3f3;
-  box-shadow: 0 0 15px #f8f6f6;
-}
-#timer, #counter {
-  /* color: #b514ff; */
- color: #0b1a2b;
 }
 
 /* ANIMATIONS */

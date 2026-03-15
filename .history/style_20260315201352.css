@@ -1,0 +1,159 @@
+body{
+background:linear-gradient(135deg,#1c5752,#0d6f8d);
+font-family:Arial;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+min-height:100vh;
+margin:0;
+color:white;
+}
+
+h1{
+margin-bottom:20px;
+}
+
+.box{
+background:white;
+color:#333;
+width:420px;
+max-width:90%;
+padding:25px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+animation:fadeIn .5s;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px)}
+to{opacity:1}
+}
+
+.progress-bar{
+width:100%;
+height:8px;
+background:#ddd;
+border-radius:10px;
+overflow:hidden;
+margin-bottom:15px;
+}
+
+#progress{
+height:100%;
+width:0%;
+background:#0d6f8d;
+transition:width .4s;
+}
+
+#timer{
+font-size:18px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+#question{
+font-size:18px;
+margin-bottom:15px;
+}
+
+.options button{
+display:block;
+width:100%;
+padding:10px;
+margin:8px 0;
+border:none;
+border-radius:6px;
+background:#0d6f8d;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+.options button:hover{
+transform:scale(1.03);
+background:#094f64;
+}
+
+.correct{
+background:#2ecc71 !important;
+}
+
+.wrong{
+background:#e74c3c !important;
+}
+
+#answer-info{
+margin-top:10px;
+font-weight:bold;
+}
+
+#nextBtn{
+margin-top:15px;
+padding:10px 20px;
+background:#1c5752;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* RESULT */
+
+.result-box{
+text-align:center;
+background:white;
+color:#333;
+padding:30px;
+border-radius:10px;
+width:350px;
+max-width:90%;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hidden{
+display:none;
+}
+
+.circle{
+width:150px;
+height:150px;
+border-radius:50%;
+border:12px solid #0d6f8d;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+font-weight:bold;
+margin:20px auto;
+animation:pop .6s;
+}
+
+@keyframes pop{
+from{transform:scale(.5);opacity:0}
+to{transform:scale(1)}
+}
+
+/* RESPONSIVE */
+
+@media(max-width:600px){
+
+.box{
+padding:20px;
+}
+
+#question{
+font-size:16px;
+}
+
+.options button{
+font-size:14px;
+}
+
+.circle{
+width:120px;
+height:120px;
+font-size:22px;
+}
+
+}
