@@ -229,13 +229,11 @@ padding:18px;
 .title{
 font-size:35px;
 margin-top: 10px;
-text-shadow: 0 0 10px #00ffff;
 }
 
 
 #question{
 font-size:16px;
-padding: 12px;
 }
 
 .options button{

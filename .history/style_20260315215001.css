@@ -8,11 +8,10 @@ font-family:Nunito;
 display:flex;
 flex-direction:column;
 align-items:center;
-/* justify-content:center; */
+justify-content:center;
 min-height:100vh;
 margin:0;
 color:white;
-padding-top: 40px;
 }
 
 /* TITLE */
@@ -59,8 +58,8 @@ transform:scale(1.1);
 background:white;
 color:#333;
 width:420px;
-max-width:95%;
-padding:20px;
+max-width:90%;
+padding:25px;
 border-radius:12px;
 box-shadow:0 0 25px rgba(231, 229, 229, 0.3);
 animation:fadeIn .5s;
@@ -223,19 +222,11 @@ to{opacity:1}
 @media(max-width:600px){
 
 .box{
-    font-size: 35px;
-padding:18px;
+padding:20px;
 }
-.title{
-font-size:35px;
-margin-top: 10px;
-text-shadow: 0 0 10px #00ffff;
-}
-
 
 #question{
 font-size:16px;
-padding: 12px;
 }
 
 .options button{
